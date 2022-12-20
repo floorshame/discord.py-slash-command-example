@@ -1,1 +1,1 @@
-# discord.py-slash-command-example
+simple just install discord.py and replace the token C:
