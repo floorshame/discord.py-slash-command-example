@@ -4,7 +4,9 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import os
-from os import listdir, isfile
+from os.path import isfile, join
+from os import listdir
+
 
 
 class MyBot(commands.Bot):
