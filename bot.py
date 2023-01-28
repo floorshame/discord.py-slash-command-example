@@ -26,8 +26,6 @@ class MyBot(commands.Bot):
     async def on_ready(self):
         
         print(f'Logged in as {bot.user} (ID: {bot.user.id})')
-        for command in self:
-            print(command)
 
             
 intents = discord.Intents.default()
