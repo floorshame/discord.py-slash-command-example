@@ -13,7 +13,11 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         
         # cogs go here
-        await self.load_extension('cogs.other')
+        for folder in os.listdir("cogs"):
+            for file in listdir(f"cogs/{folder}"):
+                if (isfile(f"cogs/{folder}/{file}")):
+                    await self.load_extension(f'commands.{folder}.{file.replace(".py", "")}')
+                    
         synced = await self.tree.sync()        
 
     async def on_ready(self):
